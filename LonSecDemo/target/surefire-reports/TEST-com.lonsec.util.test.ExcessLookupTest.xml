@@ -67,13 +67,13 @@ J9CL - 20160427_301573"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.io.tmpdir" value="C:\Users\hp\AppData\Local\Temp\"/>
-    <property name="maven.multiModuleProjectDirectory" value="c:\inTouch\LonSecDemo"/>
+    <property name="maven.multiModuleProjectDirectory" value="c:\github\LonSec\LonSecDemo"/>
     <property name="ibm.system.encoding" value="Cp1252"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="ibm.signalhandling.rs" value="false"/>
     <property name="java.ext.dirs" value="c:\Java80\jre\lib\ext"/>
-    <property name="user.dir" value="c:\inTouch\LonSecDemo"/>
+    <property name="user.dir" value="c:\github\LonSec\LonSecDemo"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.name" value="IBM J9 VM"/>

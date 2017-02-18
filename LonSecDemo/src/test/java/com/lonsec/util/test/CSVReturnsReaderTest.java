@@ -75,6 +75,19 @@ public class CSVReturnsReaderTest {
 	}
 	
 	@Test
+	public void testValidFileBatchModeLookup() {
+		CSVReturnsReader reader = new CSVReturnsReader("BATCH", regex);
+		reader.openReader("./testFiles/Returns.csv");
+		try {
+			ReturnSeries value = reader.lookup("EF-2-21255", formatter.parse("30/06/2016"));
+			assertNotNull("Null Return found", value);
+		} catch (Exception e) {
+			e.printStackTrace();
+			assertFalse("Unexpected exception", true);
+		}
+	}
+	
+	@Test
 	public void testParseError() {
 		CSVReturnsReader reader = new CSVReturnsReader("FULL", regex);
 		reader.openReader("./testFiles/ReturnsParseError.csv");

@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="fundCache" class="com.lonsec.util.impl.CacheImpl">
-        <constructor-arg value="25"/>
+        <constructor-arg value="1000"/>
     </bean>
    
     <bean id="CSVFundsReturnsReader" class="com.lonsec.process.impl.CSVReturnsReader">
@@ -17,6 +17,7 @@
     	<constructor-arg name="mode" value="FULL"/>
     	<constructor-arg name="regex" value=","/>
     	<constructor-arg name="dateFormat" value="yyyy-MM-dd"/>
+    	<property name="cacheSize" value="5000"></property>
     </bean>
 
     <bean id="CSVFundsLookup" class="com.lonsec.process.impl.CSVFundsLookup">

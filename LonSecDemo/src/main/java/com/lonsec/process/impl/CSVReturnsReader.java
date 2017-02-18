@@ -33,6 +33,7 @@ public class CSVReturnsReader implements ReturnsReader {
 	private String mode = null;
 	private String regex = "\t";
 	private String filePath = null;
+	private int cacheSize = 5000;
 	
 	private String expectedPattern = "dd/MM/yyyy";
     private SimpleDateFormat formatter = new SimpleDateFormat(expectedPattern);
@@ -114,6 +115,9 @@ public class CSVReturnsReader implements ReturnsReader {
 		}
 		else {
 			String key = code + "|" + formatter.format(returnDate);
+			if(cache == null)
+				cache = new CacheImpl<String, ReturnSeries>(cacheSize);
+
 			ReturnSeries value = cache.get(key);
 			
 			if(value == null) {
@@ -143,10 +147,11 @@ public class CSVReturnsReader implements ReturnsReader {
 					System.out.println("Error parsing " + data);
 				}
 				
-				String code = tokens[0];
+				String code = tokens[0].trim();
+				System.out.println(tokens[1].trim());
 				Date date = null;
 				try {
-					date = formatter.parse(tokens[1]);
+					date = formatter.parse(tokens[1].trim());
 				} catch (ParseException e) {
 					e.printStackTrace();
 				}
@@ -159,7 +164,7 @@ public class CSVReturnsReader implements ReturnsReader {
 					value = new ReturnSeries();
 					value.setCode(code);
 					value.setReturnDate(date);
-					value.setReturnPercentage(new BigDecimal(tokens[2]));
+					value.setReturnPercentage(new BigDecimal(tokens[2].trim()));
 					return value;
 				}
 				
@@ -201,5 +206,19 @@ public class CSVReturnsReader implements ReturnsReader {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	/**
+	 * @return the cacheSize
+	 */
+	public int getCacheSize() {
+		return cacheSize;
+	}
+
+	/**
+	 * @param cacheSize the cacheSize to set
+	 */
+	public void setCacheSize(int cacheSize) {
+		this.cacheSize = cacheSize;
 	}
 }
