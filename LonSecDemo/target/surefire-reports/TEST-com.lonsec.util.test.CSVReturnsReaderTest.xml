@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="com.lonsec.util.test.CSVReturnsReaderTest" time="0.125" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="com.lonsec.util.test.CSVReturnsReaderTest" time="0.172" errors="0" skipped="0">
   <properties>
     <property name="java.vendor" value="IBM Corporation"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -84,11 +84,11 @@ J9CL - 20160427_301573"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="com.ibm.oti.jcl.build" value="20160427_301573"/>
   </properties>
-  <testcase classname="com.lonsec.util.test.CSVReturnsReaderTest" name="testValidFileBatchModeLookup" time="0.063"/>
+  <testcase classname="com.lonsec.util.test.CSVReturnsReaderTest" name="testValidFileBatchModeLookup" time="0.094"/>
   <testcase classname="com.lonsec.util.test.CSVReturnsReaderTest" name="testParseError" time="0"/>
   <testcase classname="com.lonsec.util.test.CSVReturnsReaderTest" name="testValidTabFile" time="0"/>
   <testcase classname="com.lonsec.util.test.CSVReturnsReaderTest" name="testValidFileReadAndLookup" time="0"/>
   <testcase classname="com.lonsec.util.test.CSVReturnsReaderTest" name="testValidFileUnsupportedMode" time="0"/>
-  <testcase classname="com.lonsec.util.test.CSVReturnsReaderTest" name="testFileNotFound" time="0.062"/>
+  <testcase classname="com.lonsec.util.test.CSVReturnsReaderTest" name="testFileNotFound" time="0.078"/>
   <testcase classname="com.lonsec.util.test.CSVReturnsReaderTest" name="testValidFileLookupAndRead" time="0"/>
 </testsuite>
