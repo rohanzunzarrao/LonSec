@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="7" failures="0" name="com.lonsec.util.test.PerformanceComparatorTest" time="0" errors="0" skipped="0">
+  <properties>
+    <property name="java.vendor" value="IBM Corporation"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.boot.class.path" value="c:\Java80\jre\bin\compressedrefs\jclSC180\vm.jar;c:\Java80\jre\lib\se-service.jar;c:\Java80\jre\lib\cuda4j.jar;c:\Java80\jre\lib\math.jar;c:\Java80\jre\lib\ibmorb.jar;c:\Java80\jre\lib\ibmorbapi.jar;c:\Java80\jre\lib\ibmcfw.jar;c:\Java80\jre\lib\ibmpkcs.jar;c:\Java80\jre\lib\ibmcertpathfw.jar;c:\Java80\jre\lib\ibmjgssfw.jar;c:\Java80\jre\lib\ibmjssefw.jar;c:\Java80\jre\lib\ibmsaslfw.jar;c:\Java80\jre\lib\ibmjcefw.jar;c:\Java80\jre\lib\ibmjgssprovider.jar;c:\Java80\jre\lib\ibmjsseprovider2.jar;c:\Java80\jre\lib\ibmcertpathprovider.jar;c:\Java80\jre\lib\xmldsigfw.jar;c:\Java80\jre\lib\xml.jar;c:\Java80\jre\lib\charsets.jar;c:\Java80\jre\lib\resources.jar;c:\Java80\jre\lib\rt.jar;c:\Java80\jre\lib\dataaccess.jar;c:\Java80\jre\lib\ibmgpu.jar"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.runtime.version" value="pwa6480sr3-20160428_01 (SR3)"/>
+    <property name="user.name" value="hp"/>
+    <property name="java.compiler" value="j9jit28"/>
+    <property name="os.encoding" value="UTF8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="com.ibm.util.extralibs.properties" value=""/>
+    <property name="com.ibm.jcl.checkClassPath" value=""/>
+    <property name="user.language" value="en"/>
+    <property name="com.ibm.oti.vm.bootstrap.library.path" value="c:\Java80\jre\bin\compressedrefs;c:\Java80\jre\bin"/>
+    <property name="sun.boot.library.path" value="c:\Java80\jre\bin\compressedrefs;c:\Java80\jre\bin"/>
+    <property name="classworlds.conf" value="C:\apache-maven-3.3.9\bin\..\bin\m2.conf"/>
+    <property name="java.version" value="1.8.0"/>
+    <property name="user.timezone" value="Australia/Sydney"/>
+    <property name="com.ibm.system.agent.path" value="c:\Java80\jre\bin"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="com.ibm.zero.version" value="2"/>
+    <property name="java.endorsed.dirs" value="c:\Java80\jre\lib\endorsed"/>
+    <property name="com.ibm.oti.vm.library.version" value="28"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="com.ibm.packed.version" value="2"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="user.country" value="IN"/>
+    <property name="java.home" value="c:\Java80\jre"/>
+    <property name="java.vm.info" value="JRE 1.8.0 Windows 10 amd64-64 Compressed References 20160427_301573 (JIT enabled, AOT enabled)
+J9VM - R28_Java8_SR3_20160427_1620_B301573
+JIT  - tr.r14.java.green_20160329_114288
+GC   - R28_Java8_SR3_20160427_1620_B301573_CMPRSS
+J9CL - 20160427_301573"/>
+    <property name="os.version" value="10.0"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.version" value="2.8"/>
+    <property name="user.variant" value=""/>
+    <property name="console.encoding" value="Cp437"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="ibm.signalhandling.sigint" value="true"/>
+    <property name="user.home" value="C:\Users\hp"/>
+    <property name="com.ibm.cpu.endian" value="little"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="ibm.signalhandling.sigchain" value="true"/>
+    <property name="java.library.path" value="c:\Java80\jre\bin\compressedrefs;c:\Java80\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone\;C:\Users\hp\bin\Sencha\Cmd;C:\Java80\bin;C:\apache-maven-3.3.9\bin;;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.vendor.url" value="http://www.ibm.com/"/>
+    <property name="java.vm.vendor" value="IBM Corporation"/>
+    <property name="java.fullversion" value="JRE 1.8.0 IBM J9 2.8 Windows 10 amd64-64 Compressed References 20160427_301573 (JIT enabled, AOT enabled)
+J9VM - R28_Java8_SR3_20160427_1620_B301573
+JIT  - tr.r14.java.green_20160329_114288
+GC   - R28_Java8_SR3_20160427_1620_B301573_CMPRSS
+J9CL - 20160427_301573"/>
+    <property name="maven.home" value="C:\apache-maven-3.3.9\bin\.."/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
+    <property name="java.class.path" value="C:\apache-maven-3.3.9\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.io.tmpdir" value="C:\Users\hp\AppData\Local\Temp\"/>
+    <property name="maven.multiModuleProjectDirectory" value="c:\inTouch\LonSecDemo"/>
+    <property name="ibm.system.encoding" value="Cp1252"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="ibm.signalhandling.rs" value="false"/>
+    <property name="java.ext.dirs" value="c:\Java80\jre\lib\ext"/>
+    <property name="user.dir" value="c:\inTouch\LonSecDemo"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.name" value="IBM J9 VM"/>
+    <property name="com.ibm.oti.shared.enabled" value="false"/>
+    <property name="com.ibm.vm.bitmode" value="64"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="com.ibm.oti.configuration" value="scar"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="com.ibm.oti.jcl.build" value="20160427_301573"/>
+  </properties>
+  <testcase classname="com.lonsec.util.test.PerformanceComparatorTest" name="testNull1" time="0"/>
+  <testcase classname="com.lonsec.util.test.PerformanceComparatorTest" name="testNull2" time="0"/>
+  <testcase classname="com.lonsec.util.test.PerformanceComparatorTest" name="testNulls" time="0"/>
+  <testcase classname="com.lonsec.util.test.PerformanceComparatorTest" name="testDateBefore" time="0"/>
+  <testcase classname="com.lonsec.util.test.PerformanceComparatorTest" name="testDateAfter" time="0"/>
+  <testcase classname="com.lonsec.util.test.PerformanceComparatorTest" name="testReturns" time="0"/>
+  <testcase classname="com.lonsec.util.test.PerformanceComparatorTest" name="testEquals" time="0"/>
+</testsuite>

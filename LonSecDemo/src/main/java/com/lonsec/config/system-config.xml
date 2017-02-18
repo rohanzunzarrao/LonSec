@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="fundCache" class="com.lonsec.util.impl.CacheImpl">
+        <constructor-arg value="25"/>
+    </bean>
+   
+    <bean id="CSVFundsReturnsReader" class="com.lonsec.process.impl.CSVReturnsReader">
+    	<constructor-arg name="mode" value="FULL"/>
+    	<constructor-arg name="regex" value=","/>
+    </bean>
+    
+    <bean id="CSVBenchmarkReturnsReader" class="com.lonsec.process.impl.CSVReturnsReader">
+    	<constructor-arg name="mode" value="FULL"/>
+    	<constructor-arg name="regex" value=","/>
+    	<constructor-arg name="dateFormat" value="yyyy-MM-dd"/>
+    </bean>
+
+    <bean id="CSVFundsLookup" class="com.lonsec.process.impl.CSVFundsLookup">
+    	<constructor-arg name="cache" ref="fundCache"/>
+    	<constructor-arg name="regex" value=","/>
+    </bean>
+
+    <bean id="ExcessLookup" class="com.lonsec.process.ExcessLookup">
+    	<!-- Configuration to be read as '< -1' == underPerformed, '>= -1 && < 1' == "" and '>= 1' == "overPerformed" -->
+    	<!-- We can add as many levels as we need as long as it follows the above logic -->
+    	<constructor-arg name="config">
+    		<map>
+    			<entry key="-1" value="underPerformed"></entry>
+    			<entry key="1" value=""></entry>
+    		</map>
+    	</constructor-arg>
+    	<constructor-arg name="max" value="overPerformed"/>
+    </bean>
+        
+    <bean id="ReturnsCalculator" class="com.lonsec.process.impl.ReturnsCalculatorImpl">
+    	<constructor-arg name="lookup" ref="ExcessLookup"/>
+    </bean>
+
+	<bean id="CSVOutputWriter" class="com.lonsec.process.impl.CSVOutputWriter">
+		<constructor-arg name="fileName" value="monthlyPerformance.csv"/>
+		<constructor-arg name="delimiter" value=","/>
+    </bean>
+    
+    <bean id="ReturnsProcessor" class="com.lonsec.process.impl.ReturnProcessorImpl">
+    	<property name="fundsReturnsReader" ref="CSVFundsReturnsReader"></property>
+    	<property name="benchmarkReturnsReader" ref="CSVBenchmarkReturnsReader"></property>
+    	<property name="fundsLookup" ref="CSVFundsLookup"></property>
+    	<property name="returnsCalculator" ref="ReturnsCalculator"></property>
+    	<property name="outputWriter" ref="CSVOutputWriter"></property>
+    </bean>
+</beans>
