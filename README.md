@@ -19,6 +19,10 @@ Assumptions
 
 Note: For any out-of-memory problems, for this demo one would need to set the appropriate parameters as described in https://docs.oracle.com/cd/E19900-01/819-4742/abeik/index.html
 
+Configuration
+----------------
+For details of configuration. Please see the ConfigurationReadme.txt
+
 Running the Code
 ---------------------
 The code can be executed in two ways
@@ -28,6 +32,9 @@ The code can be executed in two ways
     java -cp target\LonSecDemo-0.0.1-SNAPSHOT.jar com.lonsec.gui.Launch
 
 2. Command Line mode - Run from the command line using the command 
-  java -cp target\LonSecDemo-0.0.1-SNAPSHOT.jar com.lonsec.process.ReturnsApp newFiles\fund.csv newFiles\benchmark.csv newFiles\FundReturnSeries.csv newFiles\BenchReturnSeries.csv
+
+    java -cp target\LonSecDemo-0.0.1-SNAPSHOT.jar com.lonsec.process.ReturnsApp newFiles\fund.csv newFiles\benchmark.csv newFiles\FundReturnSeries.csv newFiles\BenchReturnSeries.csv
+
+The output file is created in the same directory as the fund return series file. Any existing file of the same name is overwritten.
 
 NOTE: For now there is no Logger used in this application. Any messages are logged on the console.
