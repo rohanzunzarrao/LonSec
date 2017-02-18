@@ -1,4 +1,3 @@
-
 # LonSec
 Lon Sec Demo
 
@@ -24,12 +23,11 @@ Running the Code
 ---------------------
 The code can be executed in two ways
 
-1. Using the Launch GUI - Launch the GUI using the command below. The GUI ensures that the files are always present.
-java -cp target\LonSecDemo-0.0.1-SNAPSHOT.jar com.lonsec.gui.Launch
+1. Using the Launch GUI - Launch the GUI using the command below. Select the appropriate files and click "Compute". The GUI ensures that the files are always present.
 
-Select the appropriate files and click "Compute".
+    java -cp target\LonSecDemo-0.0.1-SNAPSHOT.jar com.lonsec.gui.Launch
 
-2. Command Line mode - Run from the command line using the command
-java -cp target\LonSecDemo-0.0.1-SNAPSHOT.jar com.lonsec.process.ReturnsApp newFiles\fund.csv newFiles\benchmark.csv newFiles\FundReturnSeries.csv newFiles\BenchReturnSeries.csv
+2. Command Line mode - Run from the command line using the command 
+  java -cp target\LonSecDemo-0.0.1-SNAPSHOT.jar com.lonsec.process.ReturnsApp newFiles\fund.csv newFiles\benchmark.csv newFiles\FundReturnSeries.csv newFiles\BenchReturnSeries.csv
 
-For now there is no Logger used in this application. Any messages are logged on the console.
+NOTE: For now there is no Logger used in this application. Any messages are logged on the console.
