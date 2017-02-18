@@ -1,3 +1,4 @@
+
 # LonSec
 Lon Sec Demo
 
@@ -22,6 +23,7 @@ Note: For any out-of-memory problems, for this demo one would need to set the ap
 Running the Code
 ---------------------
 The code can be executed in two ways
+
 1. Using the Launch GUI - Launch the GUI using the command below. The GUI ensures that the files are always present.
 java -cp target\LonSecDemo-0.0.1-SNAPSHOT.jar com.lonsec.gui.Launch
 
