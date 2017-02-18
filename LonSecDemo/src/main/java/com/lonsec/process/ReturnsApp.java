@@ -1,5 +1,7 @@
 package com.lonsec.process;
 
+import java.io.File;
+
 import org.springframework.context.ApplicationContext;
 
 import com.lonsec.config.AppContext;
@@ -36,8 +38,41 @@ public class ReturnsApp {
 		String fundsReturnsFile = args[2];
 		String benchmarkReturnsFile = args[3];
 		
+		if(!validInput(fundsFile, benchmarkFile, fundsReturnsFile, benchmarkReturnsFile))
+			return;
+
 		ApplicationContext context = AppContext.getContext();
 		ReturnsProcessor processor = context.getBean(ReturnsProcessor.class);
 		processor.process(fundsFile, benchmarkFile, fundsReturnsFile, benchmarkReturnsFile);
+	}
+
+	private static boolean validInput(String fundsFile, String benchmarkFile,
+			String fundsReturnsFile, String benchmarkReturnsFile) {
+		File test = new File(fundsFile);
+
+		if(!(test.exists() && test.isFile() && test.canRead())) {
+			System.out.println("Please enter a valid funds file");
+			return false;
+		}
+		
+		test = new File(benchmarkFile);
+		if(!(test.exists() && test.isFile() && test.canRead())) {
+			System.out.println("Please enter a valid benchmark file");
+			return false;
+		}
+		
+		test = new File(fundsReturnsFile);
+		if(!(test.exists() && test.isFile() && test.canRead())) {
+			System.out.println("Please enter a valid funds returns file");
+			return false;
+		}
+		
+		test = new File(benchmarkReturnsFile);
+		if(!(test.exists() && test.isFile() && test.canRead())) {
+			System.out.println("Please enter a valid benchmark returns file");
+			return false;
+		}
+		
+		return true;
 	}
 }
