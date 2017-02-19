@@ -8,9 +8,9 @@ Pre-requisites
 
 Compile
 ---------
-1. One can compile the project using "mvn compile".
-2. The unit test cases can be run using "mvn test".
-3. To package the application to run it from a JAR please run "mvn package".
+1. One can compile the project using "mvn compile" (command to be run from the LonSecDemo directory).
+2. The unit test cases can be run using "mvn test" (command to be run from the LonSecDemo directory).
+3. To package the application to run it from a JAR please run "mvn package" (command to be run from the LonSecDemo directory).
 
 Assumptions
 --------------
@@ -28,11 +28,11 @@ Running the Code
 ---------------------
 The code can be executed in two ways
 
-1. Using the Launch GUI - Launch the GUI using the command below. Select the appropriate files and click "Compute". The GUI ensures that the files are always present.
+1. Using the Launch GUI - Launch the GUI using the command below. Select the appropriate files and click "Compute". The GUI ensures that the files are always present. (Note: command to be run from the LonSecDemo directory)
 
     java -cp target\LonSecDemo-0.0.1-SNAPSHOT.jar com.lonsec.gui.Launch
 
-2. Command Line mode - Run from the command line using the command 
+2. Command Line mode - Run from the command line using the command below. (Note: command to be run from the LonSecDemo directory)
 
     java -cp target\LonSecDemo-0.0.1-SNAPSHOT.jar com.lonsec.process.ReturnsApp newFiles\fund.csv newFiles\benchmark.csv newFiles\FundReturnSeries.csv newFiles\BenchReturnSeries.csv
 
